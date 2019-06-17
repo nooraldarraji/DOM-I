@@ -101,8 +101,8 @@ siteP[8].textContent = siteContent.footer.copyright;
 
 const blog = document.createElement('a');
 const HIW = document.createElement('a'); // HIW = How it works
-blog.textContent = siteContent.newFetures.blog;
-HIW.textContent = siteContent.newFetures.howItWorks;
+blog.textContent = siteContent.newFeatures.blog;
+HIW.textContent = siteContent.newFeatures.howItWorks;
 
 n.append(blog)
 n.append(HIW)
@@ -110,4 +110,4 @@ n.append(HIW)
 // Method to change nav color
 // gn = Green nav & t = text
 const gn = document.querySelectorAll('a')
-gn.forEach(function (t) { t.style.color = siteContent.newFetures.color });
+gn.forEach(function (t) { t.style.color = siteContent.newFeatures.color });
