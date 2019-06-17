@@ -75,10 +75,20 @@ siteH4[4].textContent = siteContent["main-content"]["vision-h4"];
 const MI = document.getElementById("middle-img");   
 MI.setAttribute('src', siteContent["main-content"]["middle-img-src"]); // "middle-img-src": "img/mid-page-accent.jpg",
 
-// SiteP = Site paragraphs
+// SiteP = All site p elements
 const siteP = document.querySelectorAll('p')
 siteP[0].textContent = siteContent["main-content"]["features-content"];
 siteP[1].textContent = siteContent["main-content"]["about-content"];
 siteP[2].textContent = siteContent["main-content"]["services-content"];
 siteP[3].textContent = siteContent["main-content"]["product-content"];
 siteP[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact h4
+siteH4[5].textContent = siteContent.contact["contact-h4"];
+// cp = Contact paragraphs 
+siteP[5].textContent = siteContent.contact.address;
+siteP[6].textContent = siteContent.contact.phone;
+siteP[7].textContent = siteContent.contact.email;
+
+// Footer Paragraph
+siteP[8].textContent = siteContent.footer.copyright;
