@@ -35,6 +35,12 @@ const siteContent = {
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
+  // Added Features
+  "newFeatures": {
+    "color" : "green",
+    "blog" : "Blog",
+    "howItWorks" : "How it works"
+  }
 };
 
 // Example: Update the img src for the logo
@@ -73,7 +79,7 @@ siteH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
 // Middle image
 const MI = document.getElementById("middle-img");   
-MI.setAttribute('src', siteContent["main-content"]["middle-img-src"]); // "middle-img-src": "img/mid-page-accent.jpg",
+MI.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // SiteP = All site p elements
 const siteP = document.querySelectorAll('p')
@@ -92,3 +98,16 @@ siteP[7].textContent = siteContent.contact.email;
 
 // Footer Paragraph
 siteP[8].textContent = siteContent.footer.copyright;
+
+const blog = document.createElement('a');
+const HIW = document.createElement('a'); // HIW = How it works
+blog.textContent = siteContent.newFetures.blog;
+HIW.textContent = siteContent.newFetures.howItWorks;
+
+n.append(blog)
+n.append(HIW)
+
+// Method to change nav color
+// gn = Green nav & t = text
+const gn = document.querySelectorAll('a')
+gn.forEach(function (t) { t.style.color = siteContent.newFetures.color });
