@@ -35,8 +35,79 @@ const siteContent = {
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
+  // Added Features
+  "newFeatures": {
+    "color" : "green",
+    "blog" : "Blog",
+    "howItWorks" : "How it works"
+  }
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// l = logo
+let l = document.getElementById("logo-img");
+l.setAttribute('src', siteContent["nav"]["img-src"])
+
+// n = navigation bar
+const n = document.querySelector('nav');
+n.children[0].textContent = siteContent.nav["nav-item-1"];
+n.children[1].textContent = siteContent.nav["nav-item-2"];
+n.children[2].textContent = siteContent.nav["nav-item-3"];
+n.children[3].textContent = siteContent.nav["nav-item-4"];
+n.children[4].textContent = siteContent.nav["nav-item-5"];
+n.children[5].textContent = siteContent.nav["nav-item-6"];
+
+// Cta header txt
+const ctaH = document.querySelector('.cta-text h1')
+ctaH.textContent = siteContent.cta.h1;
+
+// Header img
+const HI = document.getElementById("cta-img");
+HI.setAttribute('src', siteContent.cta["img-src"])
+
+// b = button
+const b = document.querySelector(".cta-text button");
+b.textContent = siteContent.cta.button;
+
+// SiteH4 = All site h4 elements
+const siteH4 = document.querySelectorAll('h4')
+siteH4[0].textContent = siteContent["main-content"]["features-h4"];
+siteH4[1].textContent = siteContent["main-content"]["about-h4"];
+siteH4[2].textContent = siteContent["main-content"]["services-h4"];
+siteH4[3].textContent = siteContent["main-content"]["product-h4"];
+siteH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Middle image
+const MI = document.getElementById("middle-img");   
+MI.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// SiteP = All site p elements
+const siteP = document.querySelectorAll('p')
+siteP[0].textContent = siteContent["main-content"]["features-content"];
+siteP[1].textContent = siteContent["main-content"]["about-content"];
+siteP[2].textContent = siteContent["main-content"]["services-content"];
+siteP[3].textContent = siteContent["main-content"]["product-content"];
+siteP[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact h4
+siteH4[5].textContent = siteContent.contact["contact-h4"];
+// cp = Contact paragraphs 
+siteP[5].textContent = siteContent.contact.address;
+siteP[6].textContent = siteContent.contact.phone;
+siteP[7].textContent = siteContent.contact.email;
+
+// Footer Paragraph
+siteP[8].textContent = siteContent.footer.copyright;
+
+const blog = document.createElement('a');
+const HIW = document.createElement('a'); // HIW = How it works
+blog.textContent = siteContent.newFeatures.blog;
+HIW.textContent = siteContent.newFeatures.howItWorks;
+
+n.append(blog)
+n.append(HIW)
+
+// Method to change nav color
+// gn = Green nav & t = text
+const gn = document.querySelectorAll('a')
+gn.forEach(function (t) { t.style.color = siteContent.newFeatures.color });
