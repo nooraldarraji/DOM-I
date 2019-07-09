@@ -1,61 +1,69 @@
 const siteContent = {
-  "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
-  },
-  "cta": {
-    "h1": "DOM Is Awesome",
-    "button": "Get Started",
-    "img-src": "img/header-img.png"
-  },
-  "main-content": {
-    "features-h4":"Features",
-    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
-    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
-    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
-    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
-    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-  },
-  "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
-  },
-  "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
-  },
-  // Added Features
-  "newFeatures": {
-    "color" : "green",
-    "blog" : "Blog",
-    "howItWorks" : "How it works"
-  }
+    "nav": {
+        "navItem1": "Services",
+        "navItem2": "Product",
+        "navItem3": "Vision",
+        "navItem4": "Features",
+        "navItem5": "About",
+        "navItem6": "Contact",
+        "imgSrc": "img/logo.png"
+    },
+    "cta": {
+        "h1": "DOM Is Awesome",
+        "button": "Get Started",
+        "imgSrc": "img/header-img.png"
+    },
+    "mainContent": {
+        "featuresH4": "Features",
+        "featuresContent": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "aboutH4": "About",
+        "aboutContent": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "middleImgSrc": "img/mid-page-accent.jpg",
+        "servicesH4": "Services",
+        "servicesContent": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "productH4": "Product",
+        "productContent": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+        "visionH4": "Vision",
+        "visionContent": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    },
+    "contact": {
+        "contactH4": "Contact",
+        "address": "123 Way 456 Street Somewhere, USA",
+        "phone": "1 (888) 888-8888",
+        "email": "sales@greatidea.io",
+    },
+    "footer": {
+        "copyright": "Copyright Great Idea! 2018"
+    },
 };
+
+// Added Features
+siteContent.newFeatures = {
+    "color": "#b0b0b0",
+    "blog": "Blog",
+    "timer": "Timer",
+    "timerWeb": "timer.html"
+}
+
+// delete Object.assign(siteContent, {
+//     [.mainContent]: siteContent.mainContent
+// }).mainContent;
+
+// console.log(.mainContent)
 
 // Example: Update the img src for the logo
 // l = logo
 let l = document.getElementById("logo-img");
-l.setAttribute('src', siteContent["nav"]["img-src"])
+l.setAttribute('src', siteContent.nav.imgSrc)
 
 // n = navigation bar
 const n = document.querySelector('nav');
-n.children[0].textContent = siteContent.nav["nav-item-1"];
-n.children[1].textContent = siteContent.nav["nav-item-2"];
-n.children[2].textContent = siteContent.nav["nav-item-3"];
-n.children[3].textContent = siteContent.nav["nav-item-4"];
-n.children[4].textContent = siteContent.nav["nav-item-5"];
-n.children[5].textContent = siteContent.nav["nav-item-6"];
+n.children[0].textContent = siteContent.nav.navItem1;
+n.children[1].textContent = siteContent.nav.navItem2;
+n.children[2].textContent = siteContent.nav.navItem3;
+n.children[3].textContent = siteContent.nav.navItem4;
+n.children[4].textContent = siteContent.nav.navItem5
+n.children[5].textContent = siteContent.nav.navItem6;
 
 // Cta header txt
 const ctaH = document.querySelector('.cta-text h1')
@@ -63,7 +71,7 @@ ctaH.textContent = siteContent.cta.h1;
 
 // Header img
 const HI = document.getElementById("cta-img");
-HI.setAttribute('src', siteContent.cta["img-src"])
+HI.setAttribute('src', siteContent.cta.imgSrc)
 
 // b = button
 const b = document.querySelector(".cta-text button");
@@ -71,26 +79,26 @@ b.textContent = siteContent.cta.button;
 
 // SiteH4 = All site h4 elements
 const siteH4 = document.querySelectorAll('h4')
-siteH4[0].textContent = siteContent["main-content"]["features-h4"];
-siteH4[1].textContent = siteContent["main-content"]["about-h4"];
-siteH4[2].textContent = siteContent["main-content"]["services-h4"];
-siteH4[3].textContent = siteContent["main-content"]["product-h4"];
-siteH4[4].textContent = siteContent["main-content"]["vision-h4"];
+siteH4[0].textContent = siteContent.mainContent.featuresH4;
+siteH4[1].textContent = siteContent.mainContent.aboutH4;
+siteH4[2].textContent = siteContent.mainContent.servicesH4;
+siteH4[3].textContent = siteContent.mainContent.productH4;
+siteH4[4].textContent = siteContent.mainContent.visionH4;
 
 // Middle image
-const MI = document.getElementById("middle-img");   
-MI.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+const MI = document.getElementById("middle-img");
+MI.setAttribute('src', siteContent.mainContent.middleImgSrc);
 
 // SiteP = All site p elements
 const siteP = document.querySelectorAll('p')
-siteP[0].textContent = siteContent["main-content"]["features-content"];
-siteP[1].textContent = siteContent["main-content"]["about-content"];
-siteP[2].textContent = siteContent["main-content"]["services-content"];
-siteP[3].textContent = siteContent["main-content"]["product-content"];
-siteP[4].textContent = siteContent["main-content"]["vision-content"];
+siteP[0].textContent = siteContent.mainContent.featuresContent;
+siteP[1].textContent = siteContent.mainContent.aboutContent;
+siteP[2].textContent = siteContent.mainContent.servicesContent;
+siteP[3].textContent = siteContent.mainContent.productContent;
+siteP[4].textContent = siteContent.mainContent.visionContent;
 
 // Contact h4
-siteH4[5].textContent = siteContent.contact["contact-h4"];
+siteH4[5].textContent = siteContent.contact.contactH4;
 // cp = Contact paragraphs 
 siteP[5].textContent = siteContent.contact.address;
 siteP[6].textContent = siteContent.contact.phone;
@@ -100,14 +108,17 @@ siteP[7].textContent = siteContent.contact.email;
 siteP[8].textContent = siteContent.footer.copyright;
 
 const blog = document.createElement('a');
-const HIW = document.createElement('a'); // HIW = How it works
+const timer = document.createElement('a'); // HIW = How it works
 blog.textContent = siteContent.newFeatures.blog;
-HIW.textContent = siteContent.newFeatures.howItWorks;
-
+timer.textContent = siteContent.newFeatures.timer;
+timer.href = siteContent.newFeatures.timerWeb; // Timer Link
 n.append(blog)
-n.append(HIW)
+n.append(timer)
+    // console.log(timer.src)
+    // const getEl = document.getElementById("a");
+    // timer.setAttribute('src', siteContent.newFeatures.timerWeb);
 
 // Method to change nav color
 // gn = Green nav & t = text
 const gn = document.querySelectorAll('a')
-gn.forEach(function (t) { t.style.color = siteContent.newFeatures.color });
+gn.forEach(function(t) { t.style.color = siteContent.newFeatures.color });

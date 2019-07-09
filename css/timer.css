@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    background-color: darkgray;
+    justify-content: center;
+}
+
+timer-element {
+    text-align: center;
+    font-size: 150px;
+    margin-top: 20%;
+    font-family: 'Titillium Web', sans-serif;
+}
