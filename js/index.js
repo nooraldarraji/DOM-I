@@ -41,7 +41,8 @@ const siteContent = {
 siteContent.newFeatures = {
     "color": "#b0b0b0",
     "blog": "Blog",
-    "howItWorks": "How it works"
+    "timer": "Timer",
+    "timerWeb": "timer.html"
 }
 
 // delete Object.assign(siteContent, {
@@ -107,12 +108,15 @@ siteP[7].textContent = siteContent.contact.email;
 siteP[8].textContent = siteContent.footer.copyright;
 
 const blog = document.createElement('a');
-const HIW = document.createElement('a'); // HIW = How it works
+const timer = document.createElement('a'); // HIW = How it works
 blog.textContent = siteContent.newFeatures.blog;
-HIW.textContent = siteContent.newFeatures.howItWorks;
-
+timer.textContent = siteContent.newFeatures.timer;
+timer.href = siteContent.newFeatures.timerWeb; // Timer Link
 n.append(blog)
-n.append(HIW)
+n.append(timer)
+    // console.log(timer.src)
+    // const getEl = document.getElementById("a");
+    // timer.setAttribute('src', siteContent.newFeatures.timerWeb);
 
 // Method to change nav color
 // gn = Green nav & t = text
